@@ -36,7 +36,7 @@ function valid_fields($fields, &$errors) {
         } elseif (!preg_match($formal_text_pattern, $input)) {
             $errors[$field] = "Invalid characters.";
         } elseif (str_word_count($input) < 4) {
-            $errors[$field] = "Please enter at least 4-5 words.";
+            $errors[$field] = "Please enter at least 4 words.";
         }
     }
 }
