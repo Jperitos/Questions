@@ -7,7 +7,7 @@ function valid_name($name) {
     if (empty($name)) {
         return "Name is required.";
     } elseif (!preg_match($name_pattern, $name)) {
-        return "Name must contain only letters, spaces, and punctuation.";
+        return "Name must contain only letters and spaces.";
     } elseif (strlen($name) < 10) {
         return "Name must be at least 10 characters long.";
     }
