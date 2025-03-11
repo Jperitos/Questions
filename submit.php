@@ -35,9 +35,7 @@ function valid_fields($fields, &$errors) {
             $errors[$field] = "This field is required.";
         } elseif (!preg_match($formal_text_pattern, $input)) {
             $errors[$field] = "Invalid characters.";
-        } elseif (str_word_count($input) < 4) {
-            $errors[$field] = "Please enter at least 4 words.";
-        }
+        } 
     }
 }
 
@@ -51,9 +49,7 @@ function valid_areas($fields, &$errors) {
             $errors[$field] = "This field is required.";
         } elseif (!preg_match($formal_text_pattern, $input)) {
             $errors[$field] = "Invalid characters.";
-        } elseif (!preg_match('/\s/', $input) || !preg_match('/[.!?]$/', $input)) {
-            $errors[$field] = "Please enter at least one complete sentence.";
-        }
+        } 
     }
 }
 
