@@ -7,7 +7,7 @@ function valid_name($name) {
     if (empty($name)) {
         return "Name is required.";
     } elseif (!preg_match($name_pattern, $name)) {
-        return "Name must contain only letters and spaces.";
+        return "Invalid input name";
     } 
     return null;
 }
@@ -18,7 +18,7 @@ function valid_section($section) {
     if (empty($section)) {
         return "Section is required.";
     } elseif (!preg_match($section_pattern, $section)) {
-        return "Section must contain valid letters or numbers.";
+        return "Section must contain valid letters or numbers";
     }
     return null;
 }
