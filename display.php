@@ -45,12 +45,12 @@ $answers = $_SESSION['answers'] ?? [];
 
             <div class="quiz-item">
                 <p>1. What is the primary role of technical controls in cybersecurity?</p>
-                <label>- &nbsp;<?php echo htmlspecialchars($answers['technical-controls'] ?? ''); ?></label>
+                <label>- &nbsp;<strong><?php echo htmlspecialchars($answers['technical-controls'] ?? ''); ?></strong></label>
             </div>
 
             <div class="quiz-item">
                 <p>2. Why are secure software development practices important?</p>
-                <label>- &nbsp;<?php echo htmlspecialchars($answers['q2'] ?? ''); ?>
+                <label>- &nbsp;<strong><?php echo htmlspecialchars($answers['q2'] ?? ''); ?><strong>
                 </label>
 
             </div>
@@ -89,7 +89,7 @@ $answers = $_SESSION['answers'] ?? [];
 
 
                 <p>4. A firewall’s primary function is to:</p>
-                <label> - &nbsp;<?php echo htmlspecialchars($answers['q4'] ?? ''); ?>
+                <label> - &nbsp;<strong><?php echo htmlspecialchars($answers['q4'] ?? ''); ?><strong>
                 </label>
 
 
