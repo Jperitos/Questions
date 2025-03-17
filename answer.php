@@ -235,16 +235,52 @@ if ($id) {
             <button type="submit" name="clear_session" class="return" style="margin-left: 50px;">Return</button>
         </form>
 
-        <button type="button" class="delete" onclick="confirmDelete(<?php echo $answers['id']; ?>)">Delete Response</button>
+<button type="button" class="delete" onclick="confirmDelete(<?php echo htmlspecialchars($answers['id']); ?>)">
+    Delete Response
+</button>
 
 
-        <script>
-            function confirmDelete(id) {
-                if (confirm("Are you sure you want to delete this response?")) {
-                    window.location.href = "/conmod/delete.php?id=" + id;
+<div id="deleteModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this response?</p>
+        <div class="modal-buttons">
+            <button id="confirmDeleteBtn" class="confirm-btn">Yes, Delete</button>
+            <button type="button" onclick="closeModal()" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    let deleteId = null; // Store ID for deletion
+
+    function confirmDelete(id) {
+        deleteId = id; // Store ID
+        document.getElementById("deleteModal").style.display = "flex"; // Show modal
+    }
+
+    function closeModal() {
+        document.getElementById("deleteModal").style.display = "none"; // Hide modal
+    }
+
+    // Ensure event listener runs only after DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        const confirmBtn = document.getElementById("confirmDeleteBtn");
+        if (confirmBtn) {
+            confirmBtn.addEventListener("click", function () {
+                if (deleteId) {
+                    window.location.href = "/conmod/delete.php?id=" + deleteId; // Redirect
                 }
-            }
-        </script>
+            });
+        }
+    });
+</script>
+
+
+
+
 </body>
 
 </html>
