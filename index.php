@@ -28,20 +28,20 @@ if (isset($_POST['clear_session'])) {
 
     <div class="container">
         <div class="header">
-        <img src="image/logo1.PNG" alt="logo1" class="logo-left">
-        <div class="title-container">
-            <h1 class="main-title">Cybersecurity Quiz</h1>
-            <h3 class="instructions">ALL ANSWERS MUST BE GIVEN ON THE ANSWER SHEET</h3>
+            <img src="image/logo1.PNG" alt="logo1" class="logo-left">
+            <div class="title-container">
+                <h1 class="main-title">Cybersecurity Quiz</h1>
+                <h3 class="instructions">ALL ANSWERS MUST BE GIVEN ON THE ANSWER SHEET</h3>
+            </div>
+            <img src="image/logo.PNG" alt="logo" class="logo-right">
         </div>
-        <img src="image/logo.PNG" alt="logo" class="logo-right">
-        </div>  
 
         <div class="details">
             <p><strong>No. of Questions:</strong> 15</p>
         </div>
-      
 
-        <form method="POST" action="submit.php">
+
+        <form method="POST" action="./conmod/submit.php">
 
             <div class="info-section" style="display: flex; gap: 20px;">
                 <div class="input-group1">
@@ -143,7 +143,7 @@ if (isset($_POST['clear_session'])) {
                         "F" => "Network segmentation"
                     ];
 
-                    $selectedOptions = $form_data['q7'] ?? []; // Retain selected options
+                    $selectedOptions = $form_data['q7'] ?? []; 
 
                     foreach ($options as $value => $label) {
                         $checked = (is_array($selectedOptions) && in_array($value, $selectedOptions)) ? 'checked' : '';
@@ -258,7 +258,7 @@ if (isset($_POST['clear_session'])) {
 
             </div>
 
-            <button class="submit">Submit</button>
+            <button class="submit">Confirm</button>
         </form>
     </div>
 </body>

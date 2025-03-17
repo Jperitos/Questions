@@ -231,16 +231,20 @@ if ($id) {
 
         </div>
 
-<div class="btn-dis">
-        <div class="update">
-        <a href="update.php?id=<?php echo $answers['id']; ?>">Update Response</a>
-    </div>
-    <div class="answer">
-        <a href="answer.php?id=<?php echo $answers['id']; ?>">Submit</a>
-        </div>
-</div>
+        <form method="post" action="index.php">
+            <button type="submit" name="clear_session" class="return" style="margin-left: 50px;">Return</button>
+        </form>
+
+        <button type="button" class="delete" onclick="confirmDelete(<?php echo $answers['id']; ?>)">Delete Response</button>
 
 
+        <script>
+            function confirmDelete(id) {
+                if (confirm("Are you sure you want to delete this response?")) {
+                    window.location.href = "/conmod/delete.php?id=" + id;
+                }
+            }
+        </script>
 </body>
 
 </html>
