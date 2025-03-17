@@ -254,18 +254,18 @@ if ($id) {
 
 
 <script>
-    let deleteId = null; // Store ID for deletion
+    let deleteId = null; 
 
     function confirmDelete(id) {
-        deleteId = id; // Store ID
-        document.getElementById("deleteModal").style.display = "flex"; // Show modal
+        deleteId = id; 
+        document.getElementById("deleteModal").style.display = "flex"; 
     }
 
     function closeModal() {
-        document.getElementById("deleteModal").style.display = "none"; // Hide modal
+        document.getElementById("deleteModal").style.display = "none"; 
     }
 
-    // Ensure event listener runs only after DOM is fully loaded
+
     document.addEventListener("DOMContentLoaded", function () {
         const confirmBtn = document.getElementById("confirmDeleteBtn");
         if (confirmBtn) {
