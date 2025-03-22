@@ -235,7 +235,7 @@ input[type="checkbox"].error-input {
 
 .delete {
     border: none;
-    background-color: #4256c5;
+    background: #800808;
     color: #fffafa;
     padding: 10px 15px;
     border-radius: 5px;
@@ -248,12 +248,12 @@ input[type="checkbox"].error-input {
 
 
 .delete:hover {
-    background-color: #3140a1;
+    background: #a00606;
     transform: scale(1.05);
 }
 
 .delete:active {
-    background-color: #1e2a76;
+    background: #a00606;
     transform: scale(0.95);
 }
 
@@ -286,12 +286,16 @@ input[type="checkbox"].error-input {
 }
 
 .confirm-btn {
-    background: red;
+    background: #a00606;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+.confirm-btn:hover{
+    background: #bd0404;
+
 }
 
 .cancel-btn {
