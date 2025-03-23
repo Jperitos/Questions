@@ -59,7 +59,6 @@ function valid_checkboxes($fields, &$errors)
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
     $name = $_POST["name"] ?? "";
     $section = $_POST["section"] ?? "";
 
@@ -112,7 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $last_id = $pdo->lastInsertId();
         $_SESSION['answers'] = $_POST;
 
-        // Redirect to display.php
         header("Location: ../display.php?id=" . $last_id);
 
         exit();
